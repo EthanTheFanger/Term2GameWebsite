@@ -1,5 +1,5 @@
 	body {
-		font-family: Verdana;
+		font: 100% Helvetica, sans-serif;
 		background-color: black;
 	}
 
@@ -27,7 +27,7 @@
 	}
 
 	img {
-		float: left;
+		float: right;
 		margin-right: 20px;
 		margin-bottom: 5px;
 	}
@@ -42,24 +42,33 @@
 
 	li {
 		float: left;
-		width: 175px;
 	}
-
+	
+	img {
+		border: 5px solid navy;
+	}
+	
 	li a {
 		display: block;
 		color: white;
 		text-align: center;
-		padding: 14px 16px;
+		padding: 10px;
 		text-decoration: none;
 	}
 
 	li a.ex1:hover {
-		background-color: white;
-		color: black;
+		background-color: black;
+		-webkit-animation: color-change 1s infinite;
+		-moz-animation: color-change 1s infinite;
+		-o-animation: color-change 1s infinite;
+		-ms-animation: color-change 1s infinite;
+		animation: color-change 1s infinite;
 	}
 
 	.current {
-		background-color: grey;
+		background-color: white;
+		color: black;
+		padding: 10px;
 	}
 	
 	table, th, td {
@@ -69,7 +78,7 @@
 	}
 		
 	table {
-		width: 200;
+		width: 300;
 	}
 		
 	th {
@@ -78,4 +87,50 @@
 		
 	td:hover {
 		background-color: grey;
+	}
+	.zoom {
+		transition: transform .5s;
+		width: 200px;
+		height: 200px;
+		margin: 0 auto;
+	}
+
+	.zoom:hover {
+		transform: scale(1.5);
+	}
+	
+	@-webkit-keyframes color-change {
+		0% { color: red; }
+		25% {color: green; }
+		50% { color: blue; }
+		75% { color: purple }
+		100% { color: red;}
+	}
+	@-moz-keyframes color-change {
+		0% { color: red; }
+		25% {color: green; }
+		50% { color: blue; }
+		75% { color: purple }
+		100% { color: red;}
+	}
+	@-ms-keyframes color-change {
+		0% { color: red; }
+		25% {color: green; }
+		50% { color: blue; }
+		75% { color: purple }
+		100% { color: red;}
+	}
+	@-o-keyframes color-change {
+		0% { color: red; }
+		25% {color: green; }
+		50% { color: blue; }
+		75% { color: purple }
+		100% { color: red;}
+	}
+	@keyframes color-change {
+		0% { color: red; }
+		25% {color: green; }
+		50% { color: blue; }
+		75% { color: purple }
+		100% { color: red;}
 	}
